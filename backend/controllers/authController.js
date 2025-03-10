@@ -95,11 +95,7 @@ const login = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Get user profile
- * @route   GET /api/auth/profile
- * @access  Private
- */
+
 const getProfile = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
@@ -123,11 +119,7 @@ const getProfile = async (req, res, next) => {
   }
 };
 
-/**
- * @desc    Update user profile
- * @route   PUT /api/auth/profile
- * @access  Private
- */
+
 const updateProfile = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
